@@ -7,3 +7,12 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+5.times do
+  movie = Movie.new(
+    title: Faker::Kpop.boy_bands,
+    overview: Faker::Movies::Hobbit.quote,
+    poster_url: Faker::LoremFlickr.image,
+    rating: Faker::Number.within(range: 0..10)
+  )
+  movie.save
+end

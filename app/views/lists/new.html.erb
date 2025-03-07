@@ -1,12 +1,15 @@
-<%= simple_form_for [@list] do |f| %>
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :photo, as: :file %>
-  </div>
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+  <div class="container p-4 bg-light border rounded shadow-lg" style="max-width: 500px;">
+    <%= simple_form_for @list do |f| %>
+      <div class="form-inputs">
+        <%= f.input :name %>
+        <%= f.input :photo, as: :file %>
+      </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+      <div class="form-actions text-center">
+        <%= f.button :submit, class: "btn btn-primary mt-3" %>
+      </div>
+    <% end %>
   </div>
-<% end %>
-<br>
+</div>
 <%= link_to "Back to list", lists_path %>

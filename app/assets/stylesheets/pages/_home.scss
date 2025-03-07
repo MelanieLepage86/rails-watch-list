@@ -1,1 +1,69 @@
 // Specific CSS for your home-page
+.banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: bold;
+}
+
+.card-overlay {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.card-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white !important;
+  text-decoration: none !important;
+  text-align: center;
+}
+
+.icon-trash {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 3px 5px;
+  border-radius: 50%;
+}
+
+.icon-trash i {
+  font-size: 15px;
+  color: #333;
+}
+
+.title i {
+  font-size: 30px;
+}

@@ -1,7 +1,16 @@
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.association :movie %>
-  <%= f.input :comment %>
-  <%= f.button :submit %>
-<% end %>
-<br>
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+  <div class="container p-4 bg-light border rounded shadow-lg" style="max-width: 500px;">
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+      <div class="form-inputs">
+        <%= f.association :movie %>
+        <%= f.input :comment %>
+      </div>
+
+      <div class="form-actions text-center">
+        <%= f.button :submit, class: "btn btn-primary mt-3" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
 <%= link_to "Back to list",  list_path(@list) %>

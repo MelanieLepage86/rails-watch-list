@@ -17,7 +17,7 @@
       <% @lists.each do |list| %>
         <div class="col-md-4">
           <div class="card-overlay">
-            <%= image_tag list.image_url.present? ? list.image_url : 'default_image.jpg', class: "card-img" %>
+            <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill if list.photo.present? %>
             <div class="overlay-text">
               <h5><%= link_to list.name, list_path(list) %></h5>
             </div>
